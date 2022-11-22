@@ -1,0 +1,36 @@
+import { createTheme } from "@mui/material";
+import { red } from "@mui/material/colors";
+
+// Create a theme instance.
+const theme = createTheme({
+  typography: {
+    fontFamily: ["Open Sans", "sans-serif"].join(","),
+  },
+  palette: {
+    primary: {
+      main: "#556cd6",
+    },
+    secondary: {
+      main: "#19857b",
+    },
+    error: {
+      main: red.A400,
+    },
+    background: {
+      default: "#fff",
+    },
+  },
+  components: {
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          "&.Mui-selected": {
+            backgroundColor: "#556cd6",
+          },
+        },
+      },
+    },
+  },
+});
+
+export default theme;
